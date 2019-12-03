@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <GridPane styleClass="mypane" stylesheets="@application.css" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="275.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Eat Fruit" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas Bold" size="39.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="53.0" prefWidth="204.0" text="Help for...?" textAlignment="CENTER" textFill="WHITE">
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="GO OUT" />
+                                    <MenuItem mnemonicParsing="false" text="STAY IN" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="211.0" fitWidth="204.0">
+                           <image>
+                              <Image url="@ff.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <JFXButton layoutX="48.0" layoutY="116.0" onAction="#handleClose" style="-fx-background-color: BLACK;" text="NO" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="66.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="12.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip text="Piensa bien lo que haces" />
+                           </tooltip>
+                        </JFXButton>
+                        <JFXButton layoutX="100.0" layoutY="116.0" onAction="#showSendProfile" style="-fx-background-color: BLACK;" text="Help" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="14.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="12.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip text="¿Seguro que quieres pulsar?" />
+                           </tooltip>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="75.0" prefWidth="500.0" style="-fx-background-color: abfff1;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="62.0" fitWidth="67.0" layoutX="14.0" layoutY="7.0">
+                     <image>
+                        <Image url="@pera.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="113.0" layoutY="22.0" prefHeight="17.0" prefWidth="351.0" text="Si no sabes que comer pulsa en HELP">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
